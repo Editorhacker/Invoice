@@ -1,0 +1,5 @@
+{
+  "name": " Invoice Generator",
+  "description": "A user-friendly web app to generate, manage, and download professional invoices. Features login/signup and a real-time invoice preview.",
+  "requestFramePermissions": []
+}
