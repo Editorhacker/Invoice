@@ -50,6 +50,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigateToLogin, onNavigateToSign
                 </h1>
                 <p className="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
                    Create, customize, and send beautiful invoices in minutes. Get paid faster and focus on what matters.
+                  created by Aditya sutar
                 </p>
                 <div className="mt-10">
                     <button onClick={onNavigateToSignup} className="bg-muted-magenta text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-dusty-pink transition-all shadow-xl transform hover:scale-105">
