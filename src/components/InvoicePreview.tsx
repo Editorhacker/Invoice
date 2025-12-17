@@ -34,9 +34,9 @@ const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(({ invoic
     };
 
     return (
-        <div ref={ref} className="bg-white p-6 md:p-10 rounded-3xl shadow-2xl border-2 border-white/60">
+        <div ref={ref} className="bg-white p-4 sm:p-6 md:p-10 rounded-3xl shadow-2xl border-2 border-white/60">
             {/* Header */}
-            <div className="flex justify-between items-start mb-8">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-8">
                 <div>
                     <h1 className="text-3xl font-bold" style={{ color: invoice.accentColor }}>INVOICE</h1>
                     <p className="text-[#6B6B6B] mt-1"># {invoice.invoiceNumber}</p>
@@ -44,7 +44,7 @@ const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(({ invoic
                         <img src={invoice.logo} alt="Company Logo" className="h-18 max-w-xs object-contain mb-2" />
                     )}
                 </div>
-                <div className="text-right">
+                <div className="text-left md:text-right w-full md:w-auto">
                     <h3 className="text-xs font-bold text-[#9E9E9E] uppercase mb-2">From</h3>
                     <h2 className="text-xl font-bold text-[#2D2D2D]">{invoice.from.name}</h2>
                     <p className="text-xs text-[#6B6B6B] whitespace-pre-line mt-1">{invoice.from.address}</p>
@@ -53,14 +53,14 @@ const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(({ invoic
             </div>
 
             {/* Bill To & Dates */}
-            <div className="grid grid-cols-2 gap-8 mb-9">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-9">
                 <div>
                     <h3 className="text-xs font-bold text-[#9E9E9E] uppercase mb-2">Bill To</h3>
                     <h4 className="text-lg font-bold text-[#2D2D2D]">{invoice.to.name}</h4>
                     <p className="text-xs text-[#6B6B6B] whitespace-pre-line">{invoice.to.address}</p>
                     <p className="text-xs text-[#6B6B6B]">{invoice.to.email}</p>
                 </div>
-                <div className="text-right">
+                <div className="text-left sm:text-right">
                     <div className="mb-3">
                         <p className="text-xs font-bold text-[#9E9E9E] uppercase">Issue Date</p>
                         <p className="text-sm text-[#2D2D2D] font-semibold">{formatDate(invoice.issueDate)}</p>

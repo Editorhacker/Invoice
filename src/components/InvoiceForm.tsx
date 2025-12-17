@@ -85,7 +85,7 @@ export default function InvoiceForm({ initialData, isEditing }: InvoiceFormProps
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                        <label className="block text-sm font-semibold text-slate-700 mb-2">Client Name</label>
+                        <label className="block text-xs font-semibold text-slate-700 mb-2">Client Name</label>
                         <input
                             type="text"
                             name="clientName"
@@ -96,7 +96,7 @@ export default function InvoiceForm({ initialData, isEditing }: InvoiceFormProps
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-semibold text-slate-700 mb-2">Client Email</label>
+                        <label className="block text-xs font-semibold text-slate-700 mb-2">Client Email</label>
                         <input
                             type="email"
                             name="clientEmail"
@@ -110,7 +110,7 @@ export default function InvoiceForm({ initialData, isEditing }: InvoiceFormProps
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                        <label className="block text-sm font-semibold text-slate-700 mb-2">Status</label>
+                        <label className="block text-xs font-semibold text-slate-700 mb-2">Status</label>
                         <select
                             name="status"
                             value={formData.status}
@@ -123,7 +123,7 @@ export default function InvoiceForm({ initialData, isEditing }: InvoiceFormProps
                         </select>
                     </div>
                     <div>
-                        <label className="block text-sm font-semibold text-slate-700 mb-2">Total Amount</label>
+                        <label className="block text-xs font-semibold text-slate-700 mb-2">Total Amount</label>
                         <input
                             type="number"
                             name="amount"
@@ -136,7 +136,7 @@ export default function InvoiceForm({ initialData, isEditing }: InvoiceFormProps
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                     <div>
-                        <label className="block text-sm font-semibold text-slate-700 mb-2">Invoice Date</label>
+                        <label className="block text-xs font-semibold text-slate-700 mb-2">Invoice Date</label>
                         <input
                             type="date"
                             name="date"
@@ -147,7 +147,7 @@ export default function InvoiceForm({ initialData, isEditing }: InvoiceFormProps
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-semibold text-slate-700 mb-2">Due Date</label>
+                        <label className="block text-xs font-semibold text-slate-700 mb-2">Due Date</label>
                         <input
                             type="date"
                             name="dueDate"
@@ -177,10 +177,10 @@ export default function InvoiceForm({ initialData, isEditing }: InvoiceFormProps
                             <table className="w-full">
                                 <thead className="bg-gradient-to-r from-slate-50 to-slate-100">
                                     <tr>
-                                        <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Description</th>
-                                        <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700 w-24">Qty</th>
-                                        <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700 w-32">Price</th>
-                                        <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700 w-32">Total</th>
+                                        <th className="px-4 py-3 text-left text-xs font-semibold text-slate-700">Description</th>
+                                        <th className="px-4 py-3 text-left text-xs font-semibold text-slate-700 w-24">Qty</th>
+                                        <th className="px-4 py-3 text-left text-xs font-semibold text-slate-700 w-32">Price</th>
+                                        <th className="px-4 py-3 text-left text-xs font-semibold text-slate-700 w-32">Total</th>
                                         <th className="px-4 py-3 w-20"></th>
                                     </tr>
                                 </thead>
@@ -218,14 +218,14 @@ export default function InvoiceForm({ initialData, isEditing }: InvoiceFormProps
                                                     required
                                                 />
                                             </td>
-                                            <td className="px-4 py-3 text-sm font-bold text-indigo-600">
+                                            <td className="px-4 py-3 text-xs font-bold text-indigo-600">
                                                 ${(item.quantity * item.price).toFixed(2)}
                                             </td>
                                             <td className="px-4 py-3">
                                                 <button
                                                     type="button"
                                                     onClick={() => removeItem(index)}
-                                                    className="text-rose-600 hover:text-rose-800 text-sm font-medium transition"
+                                                    className="text-rose-600 hover:text-rose-800 text-xs  transition"
                                                 >
                                                     Remove
                                                 </button>
@@ -243,7 +243,7 @@ export default function InvoiceForm({ initialData, isEditing }: InvoiceFormProps
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
                             <p className="text-slate-500 mb-2">No items added yet</p>
-                            <p className="text-sm text-slate-400">Click "Add Item" to get started</p>
+                            <p className="text-xs text-slate-400">Click "Add Item" to get started</p>
                         </div>
                     )}
                 </div>

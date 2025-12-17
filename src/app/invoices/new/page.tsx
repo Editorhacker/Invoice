@@ -21,21 +21,20 @@ export default function NewInvoicePage() {
         return {
             invoiceNumber: "",
             from: {
-                name: session?.user?.name || 'Your Company',
-                address: '123 Main St\nAnytown, USA 12345',
-                email: session?.user?.email || 'contact@yourcompany.com',
+                name: session?.user?.name || '',
+                address: '',
+                email: session?.user?.email || '',
             },
             to: {
-                name: 'Client Company',
-                address: '456 Oak Ave\nOthertown, USA 54321',
-                email: 'contact@client.com',
+                name: '',
+                address: '',
+                email: '',
             },
             items: [
-                { id: '1', description: 'Web Design Services', quantity: 10, rate: 50 },
-                { id: '2', description: 'Backend Development', quantity: 20, rate: 75 },
+                { id: '1', description: '', quantity: 1, rate: 0 },
             ],
-            notes: 'Thank you for your business. Please pay within 30 days.',
-            taxRate: 5,
+            notes: '',
+            taxRate: 0,
             issueDate: today.toISOString().split('T')[0],
             dueDate: dueDate.toISOString().split('T')[0],
             currency: 'USD',
@@ -133,7 +132,7 @@ export default function NewInvoicePage() {
     };
 
     return (
-        <div className="max-w-6xl mx-auto px-6 py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
             <div className="mb-8">
                 <h1 className="text-3xl font-bold text-gray-900 mb-2">Create Invoice</h1>
                 <p className="text-gray-500">Fill in the details below to generate your invoice</p>
