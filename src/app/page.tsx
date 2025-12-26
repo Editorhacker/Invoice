@@ -6,7 +6,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-white">
       {/* Navbar */}
       <nav className="border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto mt-20 px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
               <FileText className="text-white" size={20} />
