@@ -12,7 +12,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
         <div className="flex min-h-screen bg-gray-50/50">
             <Sidebar />
             <main
-                className={`flex-1 min-h-screen transition-all duration-300  lg:pt-0 ${isFullWidth ? 'w-full' : 'lg:ml-64'
+                className={`flex-1 min-h-screen transition-all duration-300 pt-16  lg:pt-0 ${isFullWidth ? 'w-full' : 'lg:ml-64'
                     }`}
             >
                 {children}
